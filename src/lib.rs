@@ -1,9 +1,5 @@
-pub trait Toggle {
-    fn toggle(&mut self);
-}
+mod boolean;
+mod string;
 
-impl Toggle for bool {
-    fn toggle(&mut self) {
-        *self = !*self;
-    }
-}
+pub use boolean::BoolExt;
+pub use string::StrExt;
